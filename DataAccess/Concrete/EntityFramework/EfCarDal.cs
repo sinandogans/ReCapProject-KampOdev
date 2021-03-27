@@ -14,21 +14,14 @@ namespace DataAccess.Concrete.EntityFramework
         public void Add(Car entity)
         {
             //garbage collector gelip hemen alsın diye using kullanıyoruz, kullanmasak da olur
-
-            if(entity.DailyPrice > 0)
-            {
+            
                 using (ReCapProjectDataBaseContext context = new ReCapProjectDataBaseContext())
                 {
                     var addedEntity = context.Entry(entity);
                     addedEntity.State = EntityState.Added;
                     context.SaveChanges();
                 }
-            }
 
-            else
-            {
-                Console.WriteLine("Daily price should be higher than 0.");
-            }
         }
 
         public void Delete(Car entity)

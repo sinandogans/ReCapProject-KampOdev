@@ -11,7 +11,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            Car car1 = new Car() {Id=2, BrandId=2, ColorId=2, DailyPrice=0, ModelYear=2014, Description="Hasarsız"};
+            Car car2 = new Car() {Id=2, BrandId=2, ColorId=2, DailyPrice=10, ModelYear=2014, Description="Hasarsiz"};
             
             CarManager carManager = new CarManager(new EfCarDal());
 
@@ -20,7 +20,7 @@ namespace ConsoleUI
                 Console.WriteLine(car.ModelYear);
             }
 
-            //carManager.Delete();
+            carManager.Add(car2);
 
         }
     }
