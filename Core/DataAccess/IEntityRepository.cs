@@ -1,11 +1,10 @@
-﻿using Entities.Abstract;
-using Entities.Concrete;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     //generic constraint yapıyoruz bi alt satırda kısıtlıyoruz T leri
     //new() demek newlenebilir bir şey olması gerek demek yani Interface'in kendisi olamaz
