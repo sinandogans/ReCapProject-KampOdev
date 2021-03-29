@@ -20,6 +20,11 @@ namespace DataAccess.Concrete
             Console.WriteLine("Car has been deleted from database.");
         }
 
+        public Car Get(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Car> GetAll()
         {
             throw new NotImplementedException();

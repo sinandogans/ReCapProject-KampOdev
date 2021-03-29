@@ -29,9 +29,21 @@ namespace ConsoleUI
             //colorManager.Add(new Color() { ColorId = 1, ColorName = "White" });
             //carManager.Add(new Car() {CarId =1, BrandId =1, ColorId =1, DailyPrice =500, ModelYear = 2012, Description ="Çıtır Hasarlı", CarName="A4"  });
 
-            foreach (var car in carManager.GetCarDetails())
+            //foreach (var car in carManager.GetCarDetails().Data)
+            //{
+            //    Console.WriteLine("{0} / {1} / {2} / {3} / {4} / {5} / {6}", car.CarId, car.BrandName, car.CarName, car.ModelYear,car.ColorName, car.Description, car.DailyPrice);
+            //}
+
+
+            Car car1 = carManager.GetCarById(1).Data;
+
+            Console.WriteLine(car1.CarName + " " + carManager.GetCarById(1).Data.CarName);
+
+            var brand1 = brandManager.GetAll();
+
+            foreach (var brands in brand1.Data)
             {
-                Console.WriteLine("{0} / {1} / {2} / {3} / {4} / {5} / {6}", car.CarId, car.BrandName, car.CarName, car.ModelYear,car.ColorName, car.Description, car.DailyPrice);
+                Console.WriteLine(brands.BrandName);
             }
            
         }
