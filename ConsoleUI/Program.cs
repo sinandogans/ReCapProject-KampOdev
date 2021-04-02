@@ -24,7 +24,9 @@ namespace ConsoleUI
             CarManager carManager = new CarManager(new EfCarDal());
             BrandManager brandManager = new BrandManager(new EfBrandDal());
             ColorManager colorManager = new ColorManager(new EfColorDal());
-
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            UserManager userManager = new UserManager(new EfUserDal());
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
             //brandManager.Add(new Brand() { BrandId = 1, BrandName = "Audi" });
             //colorManager.Add(new Color() { ColorId = 1, ColorName = "White" });
             //carManager.Add(new Car() {CarId =1, BrandId =1, ColorId =1, DailyPrice =500, ModelYear = 2012, Description ="Çıtır Hasarlı", CarName="A4"  });
@@ -35,17 +37,24 @@ namespace ConsoleUI
             //}
 
 
-            Car car1 = carManager.GetCarById(1).Data;
+            //Car car1 = carManager.GetCarById(1).Data;
 
-            Console.WriteLine(car1.CarName + " " + carManager.GetCarById(1).Data.CarName);
+            //Console.WriteLine(car1.CarName + " " + carManager.GetCarById(1).Data.CarName);
 
-            var brand1 = brandManager.GetAll();
+            //var brand1 = brandManager.GetAll();
 
-            foreach (var brands in brand1.Data)
+            foreach (var brands in brandManager.GetAll().Data)
             {
                 Console.WriteLine(brands.BrandName);
             }
-           
+
+
+            //carManager.Add(new Car() { Id = 5, BrandId = 2, ColorId = 1, CarName = "A7", ModelYear = 2017, DailyPrice = 750 });
+
+            //Console.WriteLine(value.Message);
+
+            //customerManager.Add(new Customer() {CompanyName="ITU", Id=1, UserId=1, Email="sinan9444@gmail.com", FirstName="Sinan", LastName="Dogan",Password="12345" });
+
         }
     }
 }

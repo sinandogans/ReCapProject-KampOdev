@@ -1,0 +1,2 @@
+﻿ALTER TABLE Customers
+ADD FOREIGN KEY (UserId) REFERENCES Users(Id);

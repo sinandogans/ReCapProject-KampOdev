@@ -12,7 +12,9 @@ namespace Business.Constants
         
         public static string CarUpdated = "Car has been updated.";
 
-        public static string CarNameInavlid = "Car's name is invalid.";
+        public static string CarNameInavlid = "Car's name is invalid. Should have more than 2 letters.";
+
+        public static string CarPriceInvalid = "Car's price is invalid. Should be higher than 0.";
 
         public static string CarsListed = "Cars have been listed.";
 
@@ -39,6 +41,34 @@ namespace Business.Constants
         public static string ColorsListed = "Colors have been listed.";
       
         public static string BrandsListed = "Brands have been listed.";
+
+        public static string CustomerAdded = "Customer has been added.";
+
+        public static string CustomerDeleted = "Customer has been deleted.";
+
+        public static string CustomerUpdated = "Customer has been updated.";
+
+        public static string CustomersListed = "Customers have been listed.";
+
+        public static string UserAdded = "User has been added.";
+
+        public static string UserDeleted = "User has been deleted.";
+
+        public static string UserUpdated = "User has been updated.";
+
+        public static string UsersListed = "Users have been listed.";
+
+        public static string RentalAdded = "Rental has been added.";
+
+        public static string RentalDeleted = "Rental has been deleted.";
+
+        public static string RentalUpdated = "Rental has been updated.";
+
+        public static string RentalsListed = "Rentals have been listed.";
+
+        public static string RentalDateNull = "The rental has not return yet.";
+
+
 
 
     }
