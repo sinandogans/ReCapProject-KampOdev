@@ -6,8 +6,8 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-   //Context: Database ile bizim nesneleri-sınıfları ilişkilendirmek.
-    public class ReCapProjectDataBaseContext:DbContext
+    //Context: Database ile bizim nesneleri-sınıfları ilişkilendirmek.
+    public class ReCapProjectDataBaseContext : DbContext
     {
         //hangi veritabanını kullanacağımızı belirtiyoruz (OnConfiguring)
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

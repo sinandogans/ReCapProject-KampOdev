@@ -1,0 +1,60 @@
+﻿using Business.Concrete;
+using DataAccess.Abstract;
+using DataAccess.Concrete;
+using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
+using System;
+
+namespace ConsoleUI
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Car car2 = new Car() {Id=2, BrandId=2, ColorId=2, DailyPrice=10, ModelYear=2014, Description="Hasarsiz"};
+
+            //CarManager carManager = new CarManager(new EfCarDal());
+
+            //foreach (var car in carManager.GetAll())
+            //{
+            //    Console.WriteLine(car.ModelYear);
+            //}
+
+            //carManager.Delete(car2);
+            CarManager carManager = new CarManager(new EfCarDal());
+            BrandManager brandManager = new BrandManager(new EfBrandDal());
+            ColorManager colorManager = new ColorManager(new EfColorDal());
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            UserManager userManager = new UserManager(new EfUserDal());
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            //brandManager.Add(new Brand() { BrandId = 1, BrandName = "Audi" });
+            //colorManager.Add(new Color() { ColorId = 1, ColorName = "White" });
+            //carManager.Add(new Car() {CarId =1, BrandId =1, ColorId =1, DailyPrice =500, ModelYear = 2012, Description ="Çıtır Hasarlı", CarName="A4"  });
+
+            //foreach (var car in carManager.GetCarDetails().Data)
+            //{
+            //    Console.WriteLine("{0} / {1} / {2} / {3} / {4} / {5} / {6}", car.CarId, car.BrandName, car.CarName, car.ModelYear,car.ColorName, car.Description, car.DailyPrice);
+            //}
+
+
+            //Car car1 = carManager.GetCarById(1).Data;
+
+            //Console.WriteLine(car1.CarName + " " + carManager.GetCarById(1).Data.CarName);
+
+            //var brand1 = brandManager.GetAll();
+
+            foreach (var brands in brandManager.GetAll().Data)
+            {
+                Console.WriteLine(brands.BrandName);
+            }
+
+
+            //carManager.Add(new Car() { Id = 5, BrandId = 2, ColorId = 1, CarName = "A7", ModelYear = 2017, DailyPrice = 750 });
+
+            //Console.WriteLine(value.Message);
+
+            //customerManager.Add(new Customer() {CompanyName="ITU", Id=1, UserId=1, Email="sinan9444@gmail.com", FirstName="Sinan", LastName="Dogan",Password="12345" });
+
+        }
+    }
+}

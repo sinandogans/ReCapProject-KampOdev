@@ -23,7 +23,7 @@ namespace Business.Concrete
             _customerDal.Add(customer);
 
             return new SuccessResult(Messages.CustomerAdded);
-            
+
         }
 
         public IResult Delete(Customer customer)

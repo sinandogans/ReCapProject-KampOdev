@@ -25,8 +25,8 @@ namespace Business.Concrete
             {
                 return new ErrorResult(Messages.CarNameInavlid);
             }
-            
-            else if(car.DailyPrice<=0)
+
+            else if (car.DailyPrice <= 0)
             {
 
                 return new ErrorResult(Messages.CarPriceInvalid);
@@ -38,8 +38,8 @@ namespace Business.Concrete
                 _carDal.Add(car);
                 return new SuccessResult(Messages.CarAdded);
             }
-            
-            
+
+
 
         }
 
@@ -47,13 +47,13 @@ namespace Business.Concrete
         {
             _carDal.Delete(car);
             return new SuccessResult(Messages.CarDeleted);
-                
-            
+
+
         }
 
         public IDataResult<List<Car>> GetAll()
         {
-            return new DataResult<List<Car>>(_carDal.GetAll(),true,Messages.CarsListed);
+            return new DataResult<List<Car>>(_carDal.GetAll(), true, Messages.CarsListed);
         }
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
@@ -81,7 +81,7 @@ namespace Business.Concrete
         {
             _carDal.Update(car);
             return new SuccessResult(Messages.CarUpdated);
-            
+
         }
     }
 }
